@@ -3,19 +3,10 @@ import React from "react";
 
 import Beer from "../Beer";
 import Screen from "../Screen";
-
-const responseToJson = (response) => response.json();
+import useBeers from "../useBeers";
 
 export default function HomeScreen() {
-  const [beers, setBeers] = React.useState([]);
-
-  React.useEffect(() => {
-    fetch(
-      "https://my-json-server.typicode.com/caedes/formation-c-my-beer/beers"
-    )
-      .then(responseToJson)
-      .then((beers) => setBeers(beers));
-  }, [setBeers]);
+  const [beers] = useBeers();
 
   const hasBeers = beers.length > 0;
 
