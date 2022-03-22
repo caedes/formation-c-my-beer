@@ -1,9 +1,4 @@
-import { ThemeProvider } from "@mui/material/styles";
-import { QueryClient, QueryClientProvider } from "react-query";
-
-import theme from "../ds/theme";
 import Basket from ".";
-import { BasketContext } from "../contexts";
 import { sbDomain } from "../testUtils";
 
 export default {
@@ -11,16 +6,6 @@ export default {
   component: Basket,
 };
 
-const queryClient = new QueryClient();
-
-const Template = (args) => (
-  <QueryClientProvider client={queryClient}>
-    <BasketContext.Provider>
-      <ThemeProvider theme={theme}>
-        <Basket open {...args} />
-      </ThemeProvider>
-    </BasketContext.Provider>
-  </QueryClientProvider>
-);
+const Template = (args) => <Basket open {...args} />;
 
 export const Default = Template.bind({});
