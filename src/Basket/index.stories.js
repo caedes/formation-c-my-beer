@@ -1,7 +1,7 @@
 import { ThemeProvider } from "@mui/material/styles";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import theme from "../App/theme";
+import theme from "../ds/theme";
 import Basket from ".";
 import { BasketContext } from "../contexts";
 
