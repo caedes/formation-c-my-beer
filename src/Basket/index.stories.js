@@ -4,9 +4,10 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import theme from "../ds/theme";
 import Basket from ".";
 import { BasketContext } from "../contexts";
+import { sbDomain } from "../testUtils";
 
 export default {
-  title: "Basket",
+  title: sbDomain("Basket"),
   component: Basket,
 };
 
